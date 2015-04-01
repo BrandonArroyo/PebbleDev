@@ -12,7 +12,7 @@ static void update_time() {
   static char buffer[] = "00:00";
 
   // Write the current hours and minutes into the buffer
-  if(clock_is_24h_style() == true) {
+  if(clock_is_24h_style() == false) {
     //Use 2h hour format
     strftime(buffer, sizeof("00:00"), "%H:%M", tick_time);
   } else {
