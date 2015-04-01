@@ -2,13 +2,13 @@
   "uuid": "911fca7d-1802-4751-ac74-8ba94c6eeb66",
   "shortName": "Tutorial1",
   "longName": "Tutorial1",
-  "companyName": "MakeAwesomeHappen",
+  "companyName": "BrandonAWESOME",
   "versionCode": 1,
   "versionLabel": "1.0",
   "sdkVersion": "3",
   "targetPlatforms": ["aplite", "basalt"],
   "watchapp": {
-    "watchface": false
+    "watchface": true
   },
   "appKeys": {
     "dummy": 0
