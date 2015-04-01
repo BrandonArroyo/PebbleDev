@@ -4,8 +4,12 @@ static TextLayer *s_time_layer;
 static void main_window_load(Window *window) {
   // Create time TextLayer
   s_time_layer = text_layer_create(GRect(0, 55, 144, 50));
-  text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorRed);
+  #ifdef PBL_COLOR
+    window_set_background_color(s_main_window, GColorRed);
+  #else
+    window_set_background_color(s_main_window, GColorBlack);
+  #endif
+  text_layer_set_text_color(s_time_layer, GColorBlack);
   text_layer_set_text(s_time_layer, "00:00");
 
   // Improve the layout to be more like a watchface
