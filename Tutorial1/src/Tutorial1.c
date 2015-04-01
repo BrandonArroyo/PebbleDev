@@ -8,21 +8,21 @@ static void main_window_unload(Window *window){
 
 }
 static void init() {
-  //create the main window
+  // Create main Window element and assign to pointer
   s_main_window = window_create();
-  //window handlers will be set here
-  window_set_window_handlers(s_main_window,(WindowHandlers){
+
+  // Set handlers to manage the elements inside the Window
+  window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = main_window_load,
     .unload = main_window_unload
-
-  //we need to show the window on the watch, the animator is = to true
-    window_stack_push(s_main_window, true);
   });
 
+  // Show the Window on the watch, with animated=true
+  window_stack_push(s_main_window, true);
 }
 
 static void deinit() {
-  destroy(s_main_window);
+  window_destroy(s_main_window);
 }
 
 int main(void) {
